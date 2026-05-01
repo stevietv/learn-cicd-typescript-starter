@@ -9,7 +9,7 @@ const headers = {
 describe("valid key", () => {
   test("key is found", () => {
     const apikey = getAPIKey(headers);
-    expect(apikey).toBe("12345");
+    expect(apikey).toBe("123456");
   });
 
   test("no header should be null", () => {
