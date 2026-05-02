@@ -15,20 +15,19 @@ describe("valid key", () => {
   test("no header should be null", () => {
     const apikey = getAPIKey({});
     expect(apikey).toBeNull();
-  })
+  });
 
   test("malformed header should be null", () => {
     const apikey = getAPIKey({
-      authorization: "ApiKey123"
+      authorization: "ApiKey123",
     });
     expect(apikey).toBeNull();
-  })
+  });
 
-  
   test("malformed header should be null", () => {
     const apikey = getAPIKey({
-      authorization: "Key 123"
+      authorization: "Key 123",
     });
     expect(apikey).toBeNull();
-  })
+  });
 });
