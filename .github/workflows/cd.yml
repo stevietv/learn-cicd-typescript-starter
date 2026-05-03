@@ -35,4 +35,7 @@ jobs:
             
             - name: push build to GCP
               run: gcloud builds submit --tag us-central1-docker.pkg.dev/high-triode-495207-u3/notely-ar-repo/notely:latest .
+            
+            - name: deploy to cloud run
+              run: gcloud run deply notely --image us-central1-docker.pkg.dev/high-triode-495207-u3/notely-ar-repo/notely:latest --region us-central1 --allow-unauthenticated --project high-triode-495207-u3 --max-instances 4
 
